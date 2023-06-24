@@ -8,6 +8,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to my blog API" });
+});
+
 // Import Routes
 const postsRoute = require("./routes/posts");
 app.use("/api/posts", postsRoute);
