@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to my blog API" });
+  res.json({ message: "Hello, welcome to 0xConcept blog API" });
 });
 
 // Import Routes
