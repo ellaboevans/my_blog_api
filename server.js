@@ -8,11 +8,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+// Main Route
 app.get("/", (req, res) => {
   res.json({ message: "Hello, welcome to 0xConcept blog API" });
 });
 
-// Import Routes
+// Import Route
 const postsRoute = require("./routes/posts");
 app.use("/api/posts", postsRoute);
 
